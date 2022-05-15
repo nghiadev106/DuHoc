@@ -1,0 +1,501 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var newsKorea = (List<DuHoc.Models.News>)ViewBag.newsKorea;
+    var newsJapan = (List<DuHoc.Models.News>)ViewBag.newsJapan;
+    var newsVJ = (List<DuHoc.Models.News>)ViewBag.newsVJ;
+    var newsHot = (DuHoc.Models.News)ViewBag.newsHot;
+    var schoolKorea = (List<DuHoc.Models.School>)ViewBag.schoolKorea;
+    var schoolJapan = (List<DuHoc.Models.School>)ViewBag.schoolJapan;
+}
+
+<div class="gt_box pagebox" style="background-image:url(https://vjvietnam.com.vn/wp-content/uploads/2021/10/gt_bg.jpeg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="gt_wrap">
+                    <h3 class="wrap_title">CÔNG TY CỔ PHẦN TƯ VẤN DU HỌC VÀ THƯƠNG MẠI VJ</h3>
+                    <div class="gt_ct">
+                        <p style="text-align: justify;">Với hơn 10.000+ học viên đã bay cùng hàng trăm học viên đang theo học, hợp tác với hơn 300+ trường đại học uy tín tại Hàn Quốc và Nhật Bản, VJ chính là cầu nối giúp các bạn trẻ thực hiện ước mơ du học và phát triển lâu dài tại các nước phát triển hàng dầu.</p>
+                        <p style="text-align: justify;">Cùng Slogan <em><strong>“Niềm tin mang theo”</strong></em>, VJ luôn cố gắng mang đến những chương trình du học trọn gói tối ưu nhất, hỗ trợ học viên chọn trường theo đúng nguyện vọng và phù hợp với năng lực của mình.</p>
+                        <p style="text-align: justify;">Song song với đó là những trải nghiệm “khác” tuyệt vời giúp các học viên luôn nắm bắt được tình hình du học thực tế, cung cấp cho các bạn học viên những giây phút học tập hiệu quả, thân thiện và thoải mái.</p>
+                    </div>
+                    <div class="read">
+                        <a href="http://vjvietnam.com.vn/gioi-thieu/">
+                            <button class="btn-readmore btn-primary">
+                                + Xem thêm
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="gt_video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nPDGIvdPuGw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="why_wrap pagebox">
+    <div class="container">
+        <div class="row">
+            <h2 class="box-title">LÝ DO NÊN LỰA CHỌN DU HỌC VJ</h2>
+            <div class="col-ld">
+                <div class="ld_col">
+                    <div class="thumb">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/icon-uytin-2-1.png" alt="Uy Tín Trách Nhiệm" class="img-circle">
+                    </div>
+                    <div class="ld_ct">
+                        <h3 class="ld_title">Uy Tín Trách Nhiệm</h3>
+                    </div>
+                    <div class="ld_text">
+                        Với hơn 6000 học sinh đã sang Hàn Quốc và gần 4000 học sinh đã sang Nhật Bản, đến nay, công ty tư vấn du học VJ Việt Nam đã nhận được sự tín nhiệm của rất nhiều phụ huynh, học sinh và đối tác trên cả nước.
+                    </div>
+                </div>
+            </div>
+            <div class="col-ld">
+                <div class="ld_col">
+                    <div class="thumb">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/quality-1.png" alt="Chất Lượng Hàng Đầu" class="img-circle">
+                    </div>
+                    <div class="ld_ct">
+                        <h3 class="ld_title">Chất Lượng Hàng Đầu</h3>
+                    </div>
+                    <div class="ld_text">
+                        Khi tư vấn, chúng tôi là bạn. Khi xử lý hồ sơ, chúng tôi là chuyên gia. VJ cam kết học viên được tham gia khóa học đúng trình độ, do giáo viên người nước ngoài phối hợp với giáo viên trợ giảng người Việt giảng dạy.
+                    </div>
+                </div>
+            </div>
+            <div class="col-ld">
+                <div class="ld_col">
+                    <div class="thumb">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/infrastructure.png" alt="Cơ Sở Vật Chất " class="img-circle">
+                    </div>
+                    <div class="ld_ct">
+                        <h3 class="ld_title">Cơ Sở Vật Chất </h3>
+                    </div>
+                    <div class="ld_text">
+                        Với hơn 30 phòng học khang trang rộng rãi, cơ sở vật chất đầy đủ theo đúng tiêu chuẩn trường đại học, đảm bảo các tiện nghi sinh hoạt cho học viên. Hỗ trợ ký túc xá khép kín cho các bạn ở xa.
+                    </div>
+                </div>
+            </div>
+            <div class="col-ld">
+                <div class="ld_col">
+                    <div class="thumb">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/accounting.png" alt="Tài Chính Minh Bạch" class="img-circle">
+                    </div>
+                    <div class="ld_ct">
+                        <h3 class="ld_title">Tài Chính Minh Bạch</h3>
+                    </div>
+                    <div class="ld_text">
+                        Mọi phát sinh chi phí khi đi du học tại VJ đều có hợp đồng rõ ràng, đảm bảo quyền lợi cho học viên và yếu tố tài chính được minh bạch trong suốt quá trình thực hiện.
+                    </div>
+                </div>
+            </div>
+            <div class="col-ld">
+                <div class="ld_col">
+                    <div class="thumb">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/social-care.png" alt="Hỗ Trợ Tận Tình" class="img-circle">
+                    </div>
+                    <div class="ld_ct">
+                        <h3 class="ld_title">Hỗ Trợ Tận Tình</h3>
+                    </div>
+                    <div class="ld_text">
+                        Hỗ trợ đưa, đón sân bay khi học sinh xuất cảnh, hỗ trợ thủ tục nhập học cho tân sinh viên, hỗ trợ việc làm thêm cho sinh viên, hỗ trợ thủ tục chuyển trường, và tất cả mọi vấn đề liên quan trong suốt quá trình các em học tập và sinh hoạt ở nước ngoài.
+                    </div>
+                </div>
+            </div>
+            <div class="dktv">
+                <a href="http://vjvietnam.com.vn/lien-he.html"><button class="btn-link btn-primary">Đăng ký nhận tư vấn</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="qt_wrap pagebox">
+    <div class="container">
+        <div class="row">
+            <h2 class="box-title">QUY TRÌNH DU HỌC TẠI VJ</h2>
+            <div class="col-md-4">
+                <div class="qt_col">
+                    <div class="qt_thumb">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/qt1.jpeg" alt="TƯ VẤN CHỌN TRƯỜNG " class="img-circle">
+                    </div>
+                    <div class="qt_ct">
+                        <h3 class="qt_title">TƯ VẤN CHỌN TRƯỜNG </h3>
+                        <div class="qt_text">
+                            Đây là bước đầu tiên, và cũng là bước quan trọng. Trung tâm sẽ hướng dẫn chọn trường theo các tiêu chí: Sở thích, sở trường; Năng lực bản thân; Hoàn cảnh gia đình; Xu hướng thị trường lao động.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="qt_col">
+                    <div class="qt_thumb">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/qt2.jpeg" alt="TIẾP NHẬN HỒ SƠ" class="img-circle">
+                    </div>
+                    <div class="qt_ct">
+                        <h3 class="qt_title">TIẾP NHẬN HỒ SƠ</h3>
+                        <div class="qt_text">
+                            Trung tâm sẽ hướng dẫn, hỗ trợ các bạn hoàn thiện hồ sơ nhanh nhất theo đúng yêu cầu của trường mà các bạn đã chọn. Hỗ trợ hoàn thiện các thủ tục hợp pháp hóa hồ sơ để gửi sang trường.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="qt_col">
+                    <div class="qt_thumb">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/qt3.jpeg" alt="KÝ HỢP ĐỒNG" class="img-circle">
+                    </div>
+                    <div class="qt_ct">
+                        <h3 class="qt_title">KÝ HỢP ĐỒNG</h3>
+                        <div class="qt_text">
+                            Sau khi đã chọn trường với mức chi phí cụ thể, Trung tâm sẽ ký hợp đồng với gia đình học viên với các điều khoản rõ ràng. Đảm bảo chi phí minh bạch, trọn gói, không phát sinh.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="qt_col">
+                    <div class="qt_thumb">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/qt4.jpeg" alt="GIÁO DỤC ĐỊNH HƯỚNG" class="img-circle">
+                    </div>
+                    <div class="qt_ct">
+                        <h3 class="qt_title">GIÁO DỤC ĐỊNH HƯỚNG</h3>
+                        <div class="qt_text">
+                            Lúc này, các bạn sẽ yên tâm tham gia khóa học tìm hiểu ngôn ngữ và văn hóa của nước sở tại. Xen kẽ là các hoạt động ngoại khóa, văn nghệ thể thao, vui chơi giải trí. Học Mà Chơi - Chơi Mà Học.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="qt_col">
+                    <div class="qt_thumb">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/qt5.jpeg" alt="XIN VISA" class="img-circle">
+                    </div>
+                    <div class="qt_ct">
+                        <h3 class="qt_title">XIN VISA</h3>
+                        <div class="qt_text">
+                            Sau khi đã có thư mời hoặc code trường gửi về, trung tâm sẽ hoàn thiện hồ sơ và đưa các bạn lên đại sứ quán xin visa. Sẽ có cán bộ đi kèm hướng dẫn chi tiết để đảm bảo an toàn suốt quá trình đi - về.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="qt_col">
+                    <div class="qt_thumb">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/qt6.jpeg" alt="XUẤT CẢNH" class="img-circle">
+                    </div>
+                    <div class="qt_ct">
+                        <h3 class="qt_title">XUẤT CẢNH</h3>
+                        <div class="qt_text">
+                            Giai đoạn xuất cảnh cũng đồng nghĩa với việc học viên sang nhập học bên trường. Trung tâm hỗ trợ đưa đón sân bay, làm thủ tục xuất cảnh, kết hợp với trường đón học viên về làm thủ tục nhập học.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="img_center pagebox">
+    <div class="container">
+        <h2 class="taxo_title"><span>ẢNH TRUNG TÂM DU HỌC VJ</span></h2>
+        <div class="box_image">
+            <div class="col-img">
+                <div class="thumb">
+                    <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/z2808258061129_07ceeaad84e1b38bcc6639df8277df92.jpg" alt="z2808258061129_07ceeaad84e1b38bcc6639df8277df92" class="img-responsive">
+                </div>
+            </div>
+            <div class="col-img">
+                <div class="thumb">
+                    <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/z2808355946659_6640b6c535bd8e0558abeb75aaf91686.jpg" alt="z2808355946659_6640b6c535bd8e0558abeb75aaf91686" class="img-responsive">
+                </div>
+            </div>
+            <div class="col-img">
+                <div class="thumb">
+                    <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/z2808355946638_df0c8c0124fdad4c5ec1a66fc822654b.jpg" alt="z2808355946638_df0c8c0124fdad4c5ec1a66fc822654b" class="img-responsive">
+                </div>
+            </div>
+            <div class="col-img">
+                <div class="thumb">
+                    <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/z2808244832161_9e291ed744e2a9148de4c9e50c2751b5.jpg" alt="z2808244832161_9e291ed744e2a9148de4c9e50c2751b5" class="img-responsive">
+                </div>
+            </div>
+            <div class="col-img">
+                <div class="thumb">
+                    <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/z2808261294046_45f7c504f33bdc12ec17ad96fa4c9f50.jpg" alt="z2808261294046_45f7c504f33bdc12ec17ad96fa4c9f50" class="img-responsive">
+                </div>
+            </div>
+            <div class="col-img">
+                <div class="thumb">
+                    <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/z2808353295133_4bcca6bcecb356fd99716277464a4055.jpg" alt="z2808353295133_4bcca6bcecb356fd99716277464a4055" class="img-responsive">
+                </div>
+            </div>
+            <div class="col-img">
+                <div class="thumb">
+                    <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/z2808353383294_0a4135ba035592a4765d7fd71c973701.jpg" alt="z2808353383294_0a4135ba035592a4765d7fd71c973701" class="img-responsive">
+                </div>
+            </div>
+            <div class="col-img">
+                <div class="thumb">
+                    <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/z2808154706520_41b896441292f465bf882a72fad17f07-scaled.jpg" alt="z2808154706520_41b896441292f465bf882a72fad17f07" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dhhq pagebox">
+    <div class="container">
+        <h2 class="taxo_title"><a href="/tin-tuc/du-hoc-nhat-ban/1002"><span>Du học Hàn Quốc</span></a></h2>
+        <div class="row">
+            <div class="wrap_hq">
+                @if (newsKorea.Count() > 0)
+                {
+                    foreach (var item in newsKorea)
+                    {
+                        <div class="col-md-4">
+                            <div class="col_dhhq">
+                                <div class="thumb">
+                                    <a href="/tin-tuc/chi-tiet/@item.Url/@item.Id">
+                                        <img width="560" height="330" src="@item.Image" class="img-responsive thumbmd wp-post-image" alt="@item.Name" loading="lazy" />
+                                    </a>
+                                </div>
+                                <div class="post_text">
+                                    <h3 class="ptitle"><a href="/tin-tuc/chi-tiet/@item.Url/@item.Id">@item.Name</a></h3>
+                                    <div class="box_except">
+                                        @item.Description
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dhnb pagebox">
+    <div class="container">
+        <h2 class="taxo_title"><a href="/tin-tuc/du-hoc-nhat-ban/1003"><span>Du học nhật bản</span></a></h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="nb_top_post">
+                    <div class="top_thumb thumb">
+                        <a href="/tin-tuc/chi-tiet/@newsHot.Url/@newsHot.Id">
+                            <img width="560" height="330" src="@newsHot.Image" class="img-responsive thumbmd wp-post-image" alt="@newsHot.Name" loading="lazy" />
+                        </a>
+                    </div>
+                    <h3 class="ptitle"><a href="/tin-tuc/chi-tiet/@newsHot.Url/@newsHot.Id">@newsHot.Name</a></h3>
+                    <div class="box_except">
+                        @newsHot.Description
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="nb_list_post">
+                    <div class="row">
+                        @if (newsJapan.Count() > 0)
+                        {
+                            foreach (var item in newsJapan)
+                            {
+                                <div class="col-md-4">
+                                    <div class="thumb">
+                                        <a href="/tin-tuc/chi-tiet/@item.Url/@item.Id">
+                                            <img width="560" height="330" src="@item.Image" class="img-responsive thumbmd wp-post-image" alt="@item.Name" loading="lazy" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="post_text">
+                                        <h3 class="ptitle"><a href="/tin-tuc/chi-tiet/@item.Url/@item.Id">@item.Name</a></h3>
+                                        <div class="box_except">
+                                            @item.Description
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            }
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dktv pagebox" style="background-image:url(https://vjvietnam.com.vn/wp-content/uploads/2021/10/nen_ct.jpeg);">
+    <div class="container">
+        <div class="col_dk">
+            <h2 class="box-title">ĐĂNG KÝ NHẬN TƯ VẤN MIỄN PHÍ</h2>
+            <div class="line"></div>
+            <div class="sub_dk">
+                Ước mơ mà không kèm theo hành động thì dù hi vọng có cánh cũng không bao giờ bay tới đích
+            </div>
+            <div class="dk_wrap">
+                <div role="form" class="wpcf7" id="wpcf7-f239-o1" lang="vi" dir="ltr">
+                    <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+                    <form action="/#wpcf7-f239-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+                        <div style="display: none;">
+                            <input type="hidden" name="_wpcf7" value="239" />
+                            <input type="hidden" name="_wpcf7_version" value="5.5.6" />
+                            <input type="hidden" name="_wpcf7_locale" value="vi" />
+                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f239-o1" />
+                            <input type="hidden" name="_wpcf7_container_post" value="0" />
+                            <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text form-control" aria-invalid="false" placeholder="Họ &amp; Tên" /></span>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" placeholder="Email" /></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="wpcf7-form-control-wrap your-tel"><input type="tel" name="your-tel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control" aria-required="true" aria-invalid="false" placeholder="SĐT" /></span>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="wpcf7-form-control-wrap your-address"><input type="text" name="your-address" value="" size="40" class="wpcf7-form-control wpcf7-text form-control" aria-invalid="false" placeholder="Địa chỉ" /></span>
+                            </div>
+                        </div>
+                        <p>	<span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Lời nhắn"></textarea></span></p>
+                        <p>	<input type="submit" value="Đăng ký tư vấn" class="wpcf7-form-control has-spinner wpcf7-submit send_form" /></p>
+                        <div class="wpcf7-response-output" aria-hidden="true"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="school pagebox">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="school_hq">
+                    <div class="nb_top_post">
+                        <h2 class="taxo_title"><a href="/du-hoc-han-quoc/1002"><span>Trường hàn quốc</span></a></h2>
+                        @if (schoolKorea.Count() > 0)
+                        {
+                            foreach (var item in schoolKorea)
+                            {
+                                <div class="sch_post">
+                                    <div class="col_thumb thumb">
+                                        <a href="/truong-hoc/@item.Url/@item.Id">
+                                            <img width="560" height="330" src="@item.Image" class="img-responsive thumbmd wp-post-image" alt="@item.Name" loading="lazy" />
+                                        </a>
+                                    </div>
+                                    <div class="sch_ct">
+                                        <h3 class="ptitle"><a href="/truong-hoc/@item.Url/@item.Id">@item.Name</a></h3>
+                                        <div class="box_except">
+                                            @item.SortDescription
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="school_hq">
+                    <div class="nb_top_post">
+                        <h2 class="taxo_title"><a href="/du-hoc-nhat-ban/2"><span>Trường nhật bản</span></a></h2>
+                        @if (schoolJapan.Count() > 0)
+                        {
+                            foreach (var item in schoolJapan)
+                            {
+                                <div class="sch_post">
+                                    <div class="col_thumb thumb">
+                                        <a href="/truong-hoc/@item.Url/@item.Id">
+                                            <img width="560" height="330" src="@item.Image" class="img-responsive thumbmd wp-post-image" alt="@item.Name" loading="lazy" />
+                                        </a>
+                                    </div>
+                                    <div class="sch_ct">
+                                        <h3 class="ptitle"><a href="/truong-hoc/@item.Url/@item.Id">@item.Name</a></h3>
+                                        <div class="box_except">
+                                            @item.SortDescription
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dhhq pagebox">
+    <div class="container">
+        <h2 class="taxo_title"><a href="https://vjvietnam.com.vn/tin-tuc-vj/"><span>Tin tức VJ</span></a></h2>
+        <div class="row">
+            <div class="wrap_hq">
+                @if (newsVJ.Count() > 0)
+                {
+                    foreach (var item in newsVJ)
+                    {
+                        <div class="col-md-4">
+                            <div class="col_dhhq">
+                                <div class="thumb">
+                                    <a href="/tin-tuc/chi-tiet/@item.Url/@item.Id">
+                                        <img width="560" height="330" src="@item.Image" class="img-responsive thumbmd wp-post-image" alt="@item.Name" loading="lazy" />
+                                    </a>
+                                </div>
+                                <div class="post_text">
+                                    <h3 class="ptitle"><a href="/tin-tuc/chi-tiet/@item.Url/@item.Id">@item.Name</a></h3>
+                                    <div class="box_except">
+                                        @item.Description
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pagebox dt">
+    <div class="container">
+        <div class="col_dt">
+            <h3 class="taxo_title"><span>CÁC TRƯỜNG LIÊN KẾT</span></h3>
+            <div class="box_dt">
+                <div class="owl-carousel dt_owl">
+                    <div class="item">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/slider-163100126161371aadf199b.png">
+                    </div>
+                    <div class="item">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/slider-163100127261371ab8d4a40.png">
+                    </div>
+                    <div class="item">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/slider-163100128161371ac1f17f2.png">
+                    </div>
+                    <div class="item">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/slider-163100131361371ae10a4c9.png">
+                    </div>
+                    <div class="item">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/slider-163100129361371acd0ceae.png">
+                    </div>
+                    <div class="item">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/slider-163100132661371aeec4178.png">
+                    </div>
+                    <div class="item">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/slider-163100133861371afa5bcb0.png">
+                    </div>
+                    <div class="item">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/slider-163100134861371b04f0bce.png">
+                    </div>
+                    <div class="item">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/slider-163100136061371b10edf40.png">
+                    </div>
+                    <div class="item">
+                        <img src="https://vjvietnam.com.vn/wp-content/uploads/2021/10/slider-163100137061371b1aec239.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

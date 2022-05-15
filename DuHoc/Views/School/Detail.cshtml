@@ -1,0 +1,305 @@
+﻿@model DuHoc.ViewModels.School.SchoolViewModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="beacrum">
+    <div class="container">
+        <ul class="clearfix bdc_box"><li><a href="/">Trang chủ</a></li> <li class="separator">&rsaquo;</li> <li><a href="/du-hoc-nhat-ban/2">Du học nhật bản</a> <li class="separator">&rsaquo;</li> </li><li class="current">@Model.Name</li></ul>
+    </div>
+</div>
+<div class="cat_du_hoc">
+    <div class="container">
+        <h1 class="dhs_title">@Model.Name</h1>
+        <p class="view_single">Lượt người xem : @Model.ViewCount</p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="album">
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+                    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+                    <div class="fotorama" data-nav="thumbs" data-width="100%" data-height="auto">
+                        @if (Model.Images != null && Model.Image.Count() > 0)
+                        {
+                            <a href="@Model.Image">
+                                <img src="@Model.Image" width="150" height="100" data-caption="@Model.Name">
+                            </a>
+                            foreach (var item in Model.Images)
+                            {
+                                <a href="@item.Path">
+                                    <img src="@item.Path" width="150" height="100" data-caption="@Model.Name">
+                                </a>
+                            }
+                        }
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="single_mt">
+                    @Html.Raw(Model.Description)
+                </div>
+            </div>
+        </div>
+        <div class="box_intro_content">
+            @Html.Raw(Model.Detail)
+        </div>
+    </div>
+</div>
+<div class="dhhq pagebox">
+    <div class="container">
+        <h2 class="taxo_title"><span>Cảm nhận học viên</span></h2>
+        <div class="owl-carousel cnhv">
+        </div>
+    </div>
+</div> <div class="comment">
+    <div class="container">
+        <style>
+	div#respond h2 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+ol.commentlist li ul {
+    padding-left: 50px;
+}
+ol.commentlist li ul li ul{
+    padding-left: 100px;
+}
+ol.commentlist li ul li ul li ul{
+    padding-left: 150px;
+}
+form#commentform {
+    position: relative;
+    padding-bottom: 25px;
+}
+
+* {
+    box-sizing: border-box;
+}
+h2#comments {
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    position: relative;
+}
+h2#comments:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    border: 2px solid #fed700;
+    z-index: 1;
+    width: 15%;
+}
+
+.comment-meta.commentmetadata a {
+    color: #777;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.reply a {
+    text-decoration: underline;
+    color: #063f6f;
+    font-size: 12px;
+    font-style: italic;
+}
+
+cite.fn a, cite.fn {
+    font-weight: bold;
+    color: #000 !important;
+    font-style: initial;
+    display: inline-block;
+    width: 100%;
+    margin-top: 2px;
+    font-size: 11px;
+    height: 15px;
+    overflow: hidden;
+    text-align: center;
+}
+span.says {
+    display: none;
+}
+
+.comment {
+   /* background: #fafafa;*/
+    padding: 5px 0;
+}
+
+.comment textarea {
+    height: 100px;
+}
+
+.comment .form-control {
+    margin-bottom: 10px;
+}
+
+.comment input#submit {
+    display: block;
+    background: #ceb423;
+    border: none;
+    padding: 5px 15px;
+    color: #fff;
+    outline: none;
+    border-radius: 4px;
+}
+.comment #url {
+    margin-right: 0 !important;
+}
+
+.comment ol {
+    padding: 0;
+    list-style: none;
+}
+
+.comment #author,
+.comment #email,
+.comment #url {
+    width: 40% !important;
+    text-align: left;
+}
+.cm_name, .cm_email {
+    display: inline-flex;
+    line-height: 34px;
+    width: 100%;
+}
+.cm_name label, .cm_email label {
+    margin-right: 15px;
+    margin-top: 2px;
+    width: 50px;
+}
+.comment ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    text-align: left;
+    font-style: italic;
+}
+
+.comment ::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: left;
+    font-style: italic;
+}
+
+.comment:-ms-input-placeholder {
+    /* IE 10+ */
+    text-align: left;
+    font-style: italic;
+}
+
+.comment :-moz-placeholder {
+    /* Firefox 18- */
+    text-align: left;
+    font-style: italic;
+}
+
+.form-control,
+.form-control:focus {
+    box-shadow: none;
+}
+
+.clearf {
+    clear: both;
+}
+
+
+/* list comment */
+.comment h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.content-col>.comment {
+    border-top: 3px solid #777;
+}
+
+.comment-author.vcard {
+    width: 10%;
+    float: left;
+}
+
+.comment-author.vcard img {
+    border-radius: 100%;
+}
+
+.reply {
+    float: right;
+}
+
+.comment-author.vcard img {
+    margin-bottom: 5px;
+    display: block;
+    margin: auto;
+}
+.commentlist li p {
+    font-size: 14px;
+}
+
+.comment ol li {
+    display: inline-block;
+    width: 100%;
+}
+p.save_text input {
+    margin-right: 5px;
+}
+div#respond {
+    border-top: 1px solid #ccc;
+    padding: 15px 0;
+}
+        </style>
+        <!-- If comments are open, but there are no comments. -->
+
+        <div id="respond">
+            <p>Chia sẻ nhận xét của bạn</p>
+            <p>Nhận xét của bạn *</p>
+            <div class="cancel-comment-reply">
+                <a rel="nofollow" id="cancel-comment-reply-link" href="/truong-nhat-ngu-musashi-urawa/#respond" style="display:none;">Nhấp chuột vào đây để hủy trả lời.</a>
+            </div>
+            <form action="http://vjvietnam.com.vn/wp-comments-post.php" method="post" id="commentform">
+
+                <div>
+                    <textarea name="comment" id="comment" cols="58" rows="10" tabindex="4" class="form-control" placeholder=""></textarea>
+                </div>
+                <div class="cm_name">
+                    <label>Tên *</label>
+                    <input type="text" class="form-control" name="author" id="author" value="" size="22" tabindex="1" aria-required='true' placeholder="Name" />
+                </div>
+                <div class="clearfix"></div>
+                <div class="cm_email">
+                    <label>Email *</label>
+                    <input type="text" class="form-control" name="email" id="email" value="" size="22" tabindex="2" aria-required='true' placeholder="E-mail" />
+                </div>
+                <!--<p>You can use these tags: <code></code></p> -->
+                <p class="save_text">
+                    <input type="checkbox" name="save_text">Lưu tên của tôi, email trong trình duyệt này cho lần bình luận kế tiếp
+                </p>
+                <div class="clearfix"></div>
+                <div>
+                    <input name="submit" type="submit" id="submit" tabindex="5" value="Gửi đi" />
+                    <input type='hidden' name='comment_post_ID' value='1718' id='comment_post_ID' />
+                    <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="https://vjvietnam.com.vn/wp-content/themes/default/css/owl.carousel.min.css">
+<script src="https://vjvietnam.com.vn/wp-content/themes/default/js/owl.carousel.min.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+
+
+        $('.cnhv').owlCarousel({
+            loop: true, margin: 20, nav: true, autoplay: true, autoplayTimeout: 5000, autoplayHoverPause: true,
+            responsive: { 0: { items: 1 }, 480: { items: 1 }, 1000: { items: 2, nav: true } }
+        });
+        $(".owl-prev").html('<i class="fa fa-angle-left"></i>');
+        $(".owl-next").html('<i class="fa fa-angle-right"></i>');
+
+    });
+</script>

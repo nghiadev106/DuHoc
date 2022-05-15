@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuHoc", "DuHoc\DuHoc.csproj", "{31064395-813D-465D-94ED-8E7E075A8CA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31064395-813D-465D-94ED-8E7E075A8CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31064395-813D-465D-94ED-8E7E075A8CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31064395-813D-465D-94ED-8E7E075A8CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31064395-813D-465D-94ED-8E7E075A8CA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FAC3E28-9551-4C6A-B7BD-DB148EB3D9D5}
+	EndGlobalSection
+EndGlobal
