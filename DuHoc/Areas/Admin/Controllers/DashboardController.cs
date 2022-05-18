@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace DuHoc.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    public class DashboardController : Controller
+    public class DashboardController : BaseController
     {
         private readonly DuHocContext _context;
 

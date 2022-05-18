@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DA\\DuHoc\\DuHoc\\DuHoc.csproj": {}
+    "D:\\nghia\\DoAnTotNghiep2022\\Vân\\DuHoc\\DuHoc\\DuHoc.csproj": {}
   },
   "projects": {
-    "D:\\DA\\DuHoc\\DuHoc\\DuHoc.csproj": {
+    "D:\\nghia\\DoAnTotNghiep2022\\Vân\\DuHoc\\DuHoc\\DuHoc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DA\\DuHoc\\DuHoc\\DuHoc.csproj",
+        "projectUniqueName": "D:\\nghia\\DoAnTotNghiep2022\\Vân\\DuHoc\\DuHoc\\DuHoc.csproj",
         "projectName": "DuHoc",
-        "projectPath": "D:\\DA\\DuHoc\\DuHoc\\DuHoc.csproj",
-        "packagesPath": "C:\\Users\\DreamStore\\.nuget\\packages\\",
-        "outputPath": "D:\\DA\\DuHoc\\DuHoc\\obj\\",
+        "projectPath": "D:\\nghia\\DoAnTotNghiep2022\\Vân\\DuHoc\\DuHoc\\DuHoc.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\nghia\\DoAnTotNghiep2022\\Vân\\DuHoc\\DuHoc\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\DreamStore\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,6 +80,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.13, 3.1.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -85,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

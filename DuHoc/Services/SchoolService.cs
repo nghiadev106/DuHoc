@@ -25,6 +25,8 @@ namespace DuHoc.Services
 
         Task<int> Update(SchoolUpdateRequest request);
 
+        Task<int> IncreaseView(int id);
+
         Task<int> Delete(int id);
     }
     public class SchoolService : ISchoolService
@@ -128,6 +130,8 @@ namespace DuHoc.Services
             return paginationViewModel;
         }
 
+
+
         public async Task<int> Create(SchoolCreateRequest request)
         {
             using (var transaction = _context.Database.BeginTransaction())
@@ -146,7 +150,7 @@ namespace DuHoc.Services
                         Url = request.Url,
                         Status = request.Status,
                         CreateDate = DateTime.Now,
-                        ViewCount = request.ViewCount,
+                        ViewCount = 0,
                         RankId = request.RankId,
                         AddressId = request.AddressId,
                         AddressDetail = request.AddressDetail
@@ -201,7 +205,6 @@ namespace DuHoc.Services
                     project.Status = request.Status;
                     project.EditDate = DateTime.Now;
                     project.RankId = request.RankId;
-                    project.ViewCount = request.ViewCount;
                     project.AddressId = request.AddressId;
                     project.AddressDetail = request.AddressDetail;
                     if (request.File != null)
@@ -243,6 +246,24 @@ namespace DuHoc.Services
                 }
             }
         }
+
+        public async Task<int> IncreaseView(int id)
+        {
+                try
+                {
+                    School project = await _context.School.FindAsync(id);
+                    if (project == null) return -1; 
+                    project.ViewCount = project.ViewCount+1;
+                    await _context.SaveChangesAsync();
+                    return 1;
+                }
+                catch (Exception)
+                {
+                    return -1;
+                }
+            
+        }
+
 
         public async Task<int> Delete(int id)
         {

@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 
 namespace DuHoc.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    public class SlideController : Controller
+    public class SlideController : BaseController
     {
         private readonly ISlideService _service;
 
@@ -21,7 +20,7 @@ namespace DuHoc.Areas.Admin.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
             return View();
         }

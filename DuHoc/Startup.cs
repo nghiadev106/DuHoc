@@ -45,7 +45,7 @@ namespace DuHoc
             services.AddTransient<IRankService, RankService>();
             services.AddTransient<ISchoolService, SchoolService>();
             services.AddTransient<ISlideService, SlideService>();
-
+            services.AddTransient<IFeedbackService, FeedbackService>();
             services.AddControllersWithViews();
             IMvcBuilder builder = services.AddRazorPages();
             var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");

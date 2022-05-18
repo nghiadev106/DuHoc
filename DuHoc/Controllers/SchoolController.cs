@@ -27,8 +27,10 @@ namespace DuHoc.Controllers
         public async Task<IActionResult> Detail(int id)
         {
             var detail = await _service.Detail(id);
-            detail.ViewCount = detail.ViewCount + 1;
-            _context.SaveChanges();
+            if (detail != null)
+            {
+                await _service.IncreaseView(id);
+            }
             return View(detail);
         }
 

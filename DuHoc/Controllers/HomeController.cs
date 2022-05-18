@@ -33,7 +33,7 @@ namespace DuHoc.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index([FromBody]FeedBackRequest request)
+        public IActionResult Register(FeedBackRequest request)
         {
             if (ModelState.IsValid)
             {
@@ -42,7 +42,7 @@ namespace DuHoc.Controllers
                     Name = request.Name,
                     Message = request.Message,
                     CreateDate = DateTime.Now,
-                    Status = request.Status,
+                    Status = 0,
                     Address = request.Address,
                     Phone = request.Phone,
                     Email = request.Email
@@ -50,7 +50,7 @@ namespace DuHoc.Controllers
 
                 _context.Feedback.Add(model);
                 _context.SaveChanges();
-                return View(request);
+                return RedirectToAction("Index");
             }
 
             return View(request);

@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace DuHoc.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    public class QuestionsController : Controller
+    public class QuestionsController : BaseController
     {
         private readonly IQuestionService _newsService;
         private readonly ICategoryService _categoryService;

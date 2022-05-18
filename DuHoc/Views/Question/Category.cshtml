@@ -68,7 +68,7 @@
                                         </div>
                                         <div class="col-md-6 post_desc">
                                             <div class="inner_post">
-                                                <h3 class="title"><a href="/cau-hoi/chi-tiet/@item.Id">@item.Name</a></h3>
+                                                <h3 class="title"><a href="/cau-hoi/chi-tiet/@item.Url/@item.Id">@item.Name</a></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -371,7 +371,7 @@ div#respond {
                             {
                                 foreach (var item in news)
                                 {
-                                    <a class="post media" href="/cau-hoi/chi-tiet/@item.Url/@item.Id">
+                                    <a class="post media" href="/tin-tuc/chi-tiet/@item.Url/@item.Id">
                                         <div class="pull-left thumb">
                                             <img width="150" height="150" src="@item.Image" class="media-object wp-post-image" alt="@item.Name" loading="lazy" />
                                         </div>
