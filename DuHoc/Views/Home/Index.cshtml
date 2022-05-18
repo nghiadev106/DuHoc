@@ -1,4 +1,5 @@
-﻿@{
+﻿@model DuHoc.ViewModels.FeedBack.FeedBackRequest
+@{
     ViewData["Title"] = "Home Page";
     var newsKorea = (List<DuHoc.Models.News>)ViewBag.newsKorea;
     var newsJapan = (List<DuHoc.Models.News>)ViewBag.newsJapan;
@@ -106,7 +107,7 @@
                 </div>
             </div>
             <div class="dktv">
-                <a href="http://vjvietnam.com.vn/lien-he.html"><button class="btn-link btn-primary">Đăng ký nhận tư vấn</button></a>
+                <a href="/lien-he"><button class="btn-link btn-primary">Đăng ký nhận tư vấn</button></a>
             </div>
         </div>
     </div>
@@ -332,34 +333,39 @@
                 Ước mơ mà không kèm theo hành động thì dù hi vọng có cánh cũng không bao giờ bay tới đích
             </div>
             <div class="dk_wrap">
-                <div role="form" class="wpcf7" id="wpcf7-f239-o1" lang="vi" dir="ltr">
+                <div role="form">
                     <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-                    <form action="/#wpcf7-f239-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
-                        <div style="display: none;">
-                            <input type="hidden" name="_wpcf7" value="239" />
-                            <input type="hidden" name="_wpcf7_version" value="5.5.6" />
-                            <input type="hidden" name="_wpcf7_locale" value="vi" />
-                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f239-o1" />
-                            <input type="hidden" name="_wpcf7_container_post" value="0" />
-                            <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                    <form asp-action="Index" asp-controller="Home" method="post" class="wpcf7-form init" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="wpcf7-form-control-wrap your-name">
+                                    <input type="text" asp-for="Name" value="" size="40" class="wpcf7-form-control wpcf7-text form-control" aria-invalid="false" placeholder="Họ &amp; Tên" />
+                                </span>
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="wpcf7-form-control-wrap your-email">
+                                <input type="email" asp-for="Email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" placeholder="Email" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                                </span>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text form-control" aria-invalid="false" placeholder="Họ &amp; Tên" /></span>
+                                <span class="wpcf7-form-control-wrap your-tel"><input type="tel" asp-for="Phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control" aria-required="true" aria-invalid="false" placeholder="SĐT" /></span>
+                                <span asp-validation-for="Phone" class="text-danger"></span>
                             </div>
                             <div class="col-md-6">
-                                <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" placeholder="Email" /></span>
+                                <span class="wpcf7-form-control-wrap your-address"><input type="text" asp-for="Address" value="" size="40" class="wpcf7-form-control wpcf7-text form-control" aria-invalid="false" placeholder="Địa chỉ" /></span>
+                                <span asp-validation-for="Address" class="text-danger"></span>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <span class="wpcf7-form-control-wrap your-tel"><input type="tel" name="your-tel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control" aria-required="true" aria-invalid="false" placeholder="SĐT" /></span>
-                            </div>
-                            <div class="col-md-6">
-                                <span class="wpcf7-form-control-wrap your-address"><input type="text" name="your-address" value="" size="40" class="wpcf7-form-control wpcf7-text form-control" aria-invalid="false" placeholder="Địa chỉ" /></span>
-                            </div>
-                        </div>
-                        <p>	<span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Lời nhắn"></textarea></span></p>
+                        <p>
+                            <span class="wpcf7-form-control-wrap your-message">
+                                <textarea asp-for="Message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Lời nhắn"></textarea>
+                            </span>
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </p>
                         <p>	<input type="submit" value="Đăng ký tư vấn" class="wpcf7-form-control has-spinner wpcf7-submit send_form" /></p>
                         <div class="wpcf7-response-output" aria-hidden="true"></div>
                     </form>

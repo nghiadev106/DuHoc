@@ -1,5 +1,7 @@
 ﻿using DuHoc.Models;
+using DuHoc.ViewModels.FeedBack;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Linq;
 
 namespace DuHoc.Controllers
@@ -23,6 +25,35 @@ namespace DuHoc.Controllers
             ViewBag.schoolJapan = _context.School.Where(x => x.CategoryId == 2).Take(3).ToList();
             ViewBag.schoolKorea = _context.School.Where(x => x.CategoryId == 1002).Take(3).ToList();
             return View();
+        }
+
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index([FromBody]FeedBackRequest request)
+        {
+            if (ModelState.IsValid)
+            {
+                Feedback model = new Feedback()
+                {
+                    Name = request.Name,
+                    Message = request.Message,
+                    CreateDate = DateTime.Now,
+                    Status = request.Status,
+                    Address = request.Address,
+                    Phone = request.Phone,
+                    Email = request.Email
+                };
+
+                _context.Feedback.Add(model);
+                _context.SaveChanges();
+                return View(request);
+            }
+
+            return View(request);
         }
 
         public IActionResult Contact()

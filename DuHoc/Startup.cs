@@ -174,6 +174,14 @@ namespace DuHoc
                      action = "Contact"
                  });
 
+                endpoints.MapControllerRoute(
+                name: "contact",
+                pattern: "gioi-thieu", new
+                {
+                    controller = "Home",
+                    action = "About"
+                });
+
 
                 endpoints.MapControllerRoute(
                  name: "du hoc nhat",
