@@ -1363,3 +1363,4 @@ D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\obj\Debug\netcoreapp3.1\DuHoc.pdb
 D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\obj\Debug\netcoreapp3.1\DuHoc.genruntimeconfig.cache
 D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\FeedBack\Detail.cshtml.g.cs
 D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\FeedBack\Index.cshtml.g.cs
+D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Slide\Index.cshtml.g.cs
