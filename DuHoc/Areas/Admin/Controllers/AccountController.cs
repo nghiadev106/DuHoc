@@ -28,13 +28,13 @@ namespace DuHoc.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginRequest request, string returnUrl = null)
         {
-            returnUrl ??= Url.Content("~/admin/news/index");
+            returnUrl ??= Url.Content("~/admin/dashboard/index");
             // Đã đăng nhập nên chuyển hướng về Index
-            if (_signInManager.IsSignedIn(User))
-            {
-                HttpContext.Session.SetString("Token", JsonConvert.SerializeObject(request));
-                return Redirect(returnUrl);
-            }
+            //if (_signInManager.IsSignedIn(User))
+            //{
+            //    HttpContext.Session.SetString("Token", JsonConvert.SerializeObject(request));
+            //    return Redirect(returnUrl);
+            //}
 
             if (ModelState.IsValid)
             {
@@ -45,12 +45,13 @@ namespace DuHoc.Areas.Admin.Controllers
                     request.RememberMe,
                     true
                 );
+                var user = await _userManager.FindByNameAsync(request.UserNameOrEmail);
 
                 if (!result.Succeeded)
                 {
                     // Thất bại username/password -> tìm user theo email, nếu thấy thì thử đăng nhập
                     // bằng user tìm được
-                    var user = await _userManager.FindByEmailAsync(request.UserNameOrEmail);
+                    user = await _userManager.FindByEmailAsync(request.UserNameOrEmail);
                     if (user != null)
                     {
                         result = await _signInManager.PasswordSignInAsync(
@@ -64,6 +65,8 @@ namespace DuHoc.Areas.Admin.Controllers
 
                 if (result.Succeeded)
                 {
+
+                    HttpContext.Session.SetString("User", user.Email);
                     HttpContext.Session.SetString("Token", JsonConvert.SerializeObject(request));
                     return LocalRedirect(returnUrl);
                 }
