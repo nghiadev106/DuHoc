@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DuHoc.ViewModels.FeedBack
 {
-    public class FeedBackRequest
+    public class FeedBackCreateRequest
     {
         public int Id { get; set; }
 

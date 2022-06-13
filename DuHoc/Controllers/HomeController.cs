@@ -33,7 +33,7 @@ namespace DuHoc.Controllers
         }
 
         [HttpPost]
-        public IActionResult Register(FeedBackRequest request)
+        public IActionResult Register(FeedBackCreateRequest request)
         {
             if (ModelState.IsValid)
             {

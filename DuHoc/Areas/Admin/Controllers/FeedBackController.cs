@@ -1,6 +1,9 @@
-﻿using DuHoc.Models;
+﻿using DuHoc.Email;
+using DuHoc.Models;
 using DuHoc.Services;
+using DuHoc.ViewModels.FeedBack;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Mail;
 using System.Threading.Tasks;
 
 namespace DuHoc.Areas.Admin.Controllers
@@ -8,10 +11,12 @@ namespace DuHoc.Areas.Admin.Controllers
     public class FeedBackController : BaseController
     {
         private readonly IFeedbackService _service;
+        private ISendMailService _sendMailservice;
 
-        public FeedBackController(IFeedbackService service)
+        public FeedBackController(IFeedbackService service, ISendMailService sendMailservice)
         {
             _service = service;
+            _sendMailservice = sendMailservice;
         }
         public async Task<IActionResult> Index()
         {
@@ -26,9 +31,21 @@ namespace DuHoc.Areas.Admin.Controllers
             return View(res);
         }
 
-        public async Task<IActionResult> Confirm(Feedback fb)
+        public async Task<IActionResult> Confirm(FeedBackUpdateRequest fb)
         {
+
             var result =await _service.Update(fb.Id);
+
+
+            MailContent content = new MailContent
+            {
+                To = fb.Email,
+                Subject = "Phản hồi từ VJ",
+                Body = fb.Reply
+            };
+
+            await _sendMailservice.SendMail(content);
+
             if (result == 1)
             {
                 TempData["success"] = "Xác nhận thành công";

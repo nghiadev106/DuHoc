@@ -1,4 +1,5 @@
 ﻿using DuHoc.Models;
+using DuHoc.ViewModels.FeedBack;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace DuHoc.Services
     {
         Task<List<Feedback>> GetAll();
         Task<int> Create(Feedback request);
-        Task<Feedback> Detail(int id);
+        Task<FeedBackUpdateRequest> Detail(int id);
         Task<int> Update(int id);
         Task<int> Delete(int id);
     }
@@ -64,12 +65,12 @@ namespace DuHoc.Services
             }
         }
 
-        public async Task<Feedback> Detail(int id)
+        public async Task<FeedBackUpdateRequest> Detail(int id)
         {
             try
             {
                 Feedback fb = await _context.Feedback.FindAsync(id);
-                Feedback detailFeedback = new Feedback()
+                FeedBackUpdateRequest detailFeedback = new FeedBackUpdateRequest()
                 {
                     Id = fb.Id,
                     Name = fb.Name,

@@ -1302,7 +1302,6 @@ D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\bin\Debug\netcoreapp3.1\runtimes\win
 D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\obj\Debug\netcoreapp3.1\DuHoc.csprojAssemblyReference.cache
 D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\obj\Debug\netcoreapp3.1\DuHoc.AssemblyInfoInputs.cache
 D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\obj\Debug\netcoreapp3.1\DuHoc.AssemblyInfo.cs
 D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\obj\Debug\netcoreapp3.1\DuHoc.csproj.CoreCompileInputs.cache
@@ -1364,3 +1363,7 @@ D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\obj\Debug\netcoreapp3.1\DuHoc.genrun
 D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\FeedBack\Detail.cshtml.g.cs
 D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\FeedBack\Index.cshtml.g.cs
 D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Slide\Index.cshtml.g.cs
+D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\bin\Debug\netcoreapp3.1\MailKit.dll
+D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\bin\Debug\netcoreapp3.1\MimeKit.dll
+D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+D:\nghia\DoAnTotNghiep2022\Vân\DuHoc\DuHoc\obj\Debug\netcoreapp3.1\DuHoc.csprojAssemblyReference.cache

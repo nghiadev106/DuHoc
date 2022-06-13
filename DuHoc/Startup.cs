@@ -1,3 +1,4 @@
+using DuHoc.Email;
 using DuHoc.Models;
 using DuHoc.Services;
 using Microsoft.AspNetCore.Builder;
@@ -23,6 +24,11 @@ namespace DuHoc
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddOptions();
+            var mailsettings = Configuration.GetSection("MailSettings");
+            services.Configure<MailSettings>(mailsettings);
+
+
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(
                    Configuration.GetConnectionString("DefaultConnection")));
@@ -45,7 +51,8 @@ namespace DuHoc
             services.AddTransient<IRankService, RankService>();
             services.AddTransient<ISchoolService, SchoolService>();
             services.AddTransient<ISlideService, SlideService>();
-            services.AddTransient<IFeedbackService, FeedbackService>();
+            services.AddTransient<IFeedbackService, FeedbackService>(); 
+            services.AddTransient<ISendMailService, SendMailService>();
             services.AddControllersWithViews();
             IMvcBuilder builder = services.AddRazorPages();
             var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
